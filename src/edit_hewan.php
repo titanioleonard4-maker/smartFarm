@@ -5,7 +5,7 @@ if (!isset($_SESSION['id_peternak']) || $_SESSION['role'] !== 'admin') {
     exit;
 }
 
-include 'koneksi.php';
+require __DIR__ . '/koneksi.php';
 
 // A. Jika tombol simpan ditekan
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

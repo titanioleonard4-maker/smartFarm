@@ -4,7 +4,7 @@ if (!isset($_SESSION['id_peternak'])) {
     header("Location: login.php");
     exit;
 }
-include 'koneksi.php';
+require __DIR__ . '/koneksi.php';
 
 $is_admin = ($_SESSION['role'] === 'admin');
 

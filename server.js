@@ -121,9 +121,7 @@ setInterval(async () => {
       io.to("admin").emit("update_suhu", dataSensor);
     }
 
-    console.log(
-      `[${new Date().toLocaleTimeString()}] Update ${rows.length} hewan — ${abnormalCount} abnormal`,
-    );
+
   } catch (error) {
     console.error("Error:", error);
   }

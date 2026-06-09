@@ -10,7 +10,7 @@ if ($_SESSION['role'] !== 'admin') {
     exit;
 }
 
-include 'koneksi.php';
+require __DIR__ . '/koneksi.php';
 
 // Handle hapus peternak
 if (isset($_GET['hapus'])) {

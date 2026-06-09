@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'koneksi.php';
+require __DIR__ . '/koneksi.php';
 
 $pesan = "";
 

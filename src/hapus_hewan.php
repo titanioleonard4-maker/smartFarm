@@ -5,7 +5,7 @@ if (!isset($_SESSION['id_peternak']) || $_SESSION['role'] !== 'admin') {
     exit;
 }
 
-include 'koneksi.php';
+require __DIR__ . '/koneksi.php';
 
 if (isset($_GET['id'])) {
     $id   = (int) $_GET['id'];

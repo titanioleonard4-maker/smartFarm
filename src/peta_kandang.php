@@ -4,7 +4,7 @@ if (!isset($_SESSION['id_peternak'])) {
     header("Location: login.php");
     exit;
 }
-include 'koneksi.php';
+require __DIR__ . '/koneksi.php';
 
 $is_admin = ($_SESSION['role'] === 'admin');
 $id_sesi  = (int) $_SESSION['id_peternak'];
@@ -189,7 +189,7 @@ while ($m = $stmt_map->fetch(PDO::FETCH_ASSOC)) {
             updateKondisiHewan(h.id_hewan, h.kode_kandang, h.posisi_x, h.posisi_y, h.suhu, h.detak_jantung);
         });
 
-        var socket = io('http://localhost:3000');
+        var socket = io('https://tiofarm.naftalists.space');
         var idPeternak = <?= json_encode($_SESSION['id_peternak']) ?>;
         var isAdmin    = <?= json_encode($is_admin) ?>;
         socket.on('connect', function() {
