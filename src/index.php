@@ -5,4 +5,9 @@ if (!isset($_SESSION['id_peternak'])) {
     exit;
 }
 header("Location: dashboard.php");
-exit;   
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+
+</html>
